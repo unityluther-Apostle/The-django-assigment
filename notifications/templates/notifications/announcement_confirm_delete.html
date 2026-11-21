@@ -1,0 +1,20 @@
+{% extends 'notifications/base.html' %}
+
+{% block title %}Delete Announcement{% endblock %}
+
+{% block content %}
+<a href="{% url 'notifications:manage_dashboard' %}" class="back-link">← Back to Manage</a>
+
+<div class="delete-card">
+    <h1 class="page-title">Delete Announcement?</h1>
+    <p>Are you sure you want to delete:</p>
+    <p class="delete-title">"{{ object.title }}"</p>
+    <p class="delete-warning">This action cannot be undone.</p>
+
+    <form method="post" class="delete-form">
+        {% csrf_token %}
+        <button type="submit" class="btn-danger">Yes, Delete</button>
+        <a href="{% url 'notifications:manage_dashboard' %}" class="btn-secondary">Cancel</a>
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'notifications/base.html' %}
+{% block title %}{{ announcement.title }} - School Notifications {% endblock %}
+
+{% block content %}
+
+<a href ="{% url 'notifications:feed' %}" class="back-link"> Back to Feed </a>
+<article class="detail-card detail-{{ announncement.category }}">
+	<span class="category-badge badge-{{ announcement.category }}">
+		{{ announcement.get_category_display }}
+	</span>
+	<h1> {{ announcement.title }} </h1>
+	<p class="card-date">
+		published {{ announcement.published_date|date:"M d, Y . H:i" }}
+	</p>
+	<div class="detail-body">
+		{{ announcement.body|linebreaks }}
+	</div>
+</article>
+{% endblock %}

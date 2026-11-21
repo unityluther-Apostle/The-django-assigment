@@ -1,0 +1,59 @@
+{% extends 'notifications/base.html' %}
+{% load static %}
+
+{% block title %}Feed School Notifications{% endblock %}
+
+{% block content %}
+
+<h1 class="page-title">Your Notifications</h1>
+
+
+<div class="feed-grid">
+    
+
+    <section class="column column-news">
+        <h2 class="column-title">School News</h2>
+        {% if news %}
+            {% for a in news %}
+                <a class="announcement-card card-news"
+                    href="{% url 'notifications:announcement_detail' a.id %}">
+                    <div class="card-header">
+                        <h3>{{ a.title }}</h3>
+                        {% if a.id not in read_ids %}
+                            <span class="badge-new">NEW</span>
+                        {% endif %}
+                    </div>
+                    <p class="card-date">{{ a.published_date|date:"M d, Y . H:i" }}</p>
+                    <p class="card-preview">{{ a.body|truncatewords:15 }}</p>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p class="empty-state">No news announcements yet.</p>
+        {% endif %}
+    </section>
+
+    <!-- ENTERTAINMENT -->
+    <section class="column column-entertainment">
+        <h2 class="column-title">Entertainment</h2>
+        {% if entertainment %}
+            {% for a in entertainment %}
+                <a class="announcement-card card-entertainment"
+                    href="{% url 'notifications:announcement_detail' a.id %}">
+                    <div class="card-header">
+                        <h3>{{ a.title }}</h3>
+                        {% if a.id not in read_ids %}
+                            <span class="badge-new">NEW</span>
+                        {% endif %}
+                    </div>
+                    <p class="card-date">{{ a.published_date|date:"M d, Y . H:i" }}</p>
+                    <p class="card-preview">{{ a.body|truncatewords:15 }}</p>
+                </a>
+            {% endfor %}
+        {% else %}
+            <p class="empty-state">No entertainment announcements yet.</p>
+        {% endif %}
+    </section>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,11 @@
+<a class="announcement-card card-{{ announcement.category }}"
+   href="{% url 'notifications:announcement_detail' announcement.pk %}">
+    <div class="card-header">
+        <h3>{{ announcement.title }}</h3>
+        {% if announcement.pk not in read_ids %}
+            <span class="badge-new">NEW</span>
+        {% endif %}
+    </div>
+    <p class="card-date">{{ announcement.published_date|date:"M d, Y · H:i" }}</p>
+    <p class="card-preview">{{ announcement.body|truncatewords:15 }}</p>
+</a>

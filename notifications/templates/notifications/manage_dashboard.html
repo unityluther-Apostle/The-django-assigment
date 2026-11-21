@@ -1,0 +1,81 @@
+{% extends "notifications/base.html" %}
+
+{% block title %}Manage Announcements{% endblock %}
+
+{% block content %}
+<div class="manage-header">
+    <h1 class="page-title">Manage Announcements</h1>
+    <a href="{% url 'notifications:announcement_create' %}" class="btn-primary">
+        + New Announcement
+    </a>
+</div>
+
+<div class="filter-bar">
+    <a
+        href="{% url 'notifications:manage_dashboard' %}"
+        class="filter-btn {% if current_category == 'all' %}active{% endif %}"
+    >
+        All
+    </a>
+
+    <a
+        href="{% url 'notifications:manage_dashboard' %}?category=news"
+        class="filter-btn {% if current_category == 'news' %}active{% endif %}"
+    >
+        School News
+    </a>
+
+    <a
+        href="{% url 'notifications:manage_dashboard' %}?category=entertainment"
+        class="filter-btn {% if current_category == 'entertainment' %}active{% endif %}"
+    >
+        Entertainment
+    </a>
+</div>
+
+{% if announcements %}
+    <table class="manage-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Author</th>
+                <th>Published</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for a in announcements %}
+                <tr>
+                    <td>{{ a.title }}</td>
+                    <td>
+                        <span class="category-badge badge-{{ a.category }}">
+                            {{ a.get_category_display }}
+                        </span>
+                    </td>
+                    <td>{{ a.author.username }}</td>
+                    <td>{{ a.published_date|date:"M d, Y · H:i" }}</td>
+                    <td class="actions">
+                        <a
+                            href="{% url 'notifications:announcement_update' a.id %}"
+                            class="btn-sm btn-edit"
+                        >
+                            Edit
+                        </a>
+                        <a
+                            href="{% url 'notifications:announcement_delete' a.id %}"
+                            class="btn-sm btn-delete"
+                        >
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p class="empty-state">
+        No announcements in this category. Click “New Announcement” to create one.
+    </p>
+{% endif %}
+{% endblock %}
