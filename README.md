@@ -1,4 +1,4 @@
-<img width="1304" height="666" alt="the actual notice " src="https://github.com/user-attachments/assets/b94137d3-47f1-4b4f-9584-3338151da166" /><img width="1307" height="676" alt="inserting" src="https://github.com/user-attachments/assets/89f61795-477c-4a00-82dd-ff1044434d09" />Name:
+Name:
   Paul Ssebuliba 
 Regno. 
   24/449BSE/AP/U
@@ -7,8 +7,8 @@ School Notification System
 A web app built with Django where school admins post notices and viewers read them.
 
 How it works?
-  Admin — logs in, creates/edits/deletes notices.
-  Viewer — logs in, sees published notices only.
+  Admin: logs in, creates/edits/deletes notices.
+  Viewer: logs in, sees published notices only.
   Access is controlled with Django authentication and role checks.
 
 Screenshots
