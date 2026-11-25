@@ -1,4 +1,4 @@
-Name:
+<img width="1304" height="666" alt="the actual notice " src="https://github.com/user-attachments/assets/b94137d3-47f1-4b4f-9584-3338151da166" /><img width="1307" height="676" alt="inserting" src="https://github.com/user-attachments/assets/89f61795-477c-4a00-82dd-ff1044434d09" />Name:
   Paul Ssebuliba 
 Regno. 
   24/449BSE/AP/U
@@ -13,10 +13,12 @@ How it works?
 
 Screenshots
 
-<img width="1366" height="742" alt="login page" src="https://github.com/user-attachments/assets/0cadb65c-e4d4-43ea-bc3c-cea30898aa0b" />
-<img width="1366" height="742" alt="default user" src="https://github.com/user-attachments/assets/27967aef-2e60-4228-ac2f-fca5c5ba39f9" />
-<img width="1366" height="742" alt="writing the notice" src="https://github.com/user-attachments/assets/2692d867-0eab-4074-a234-eea68b094c3f" />
-<img width="1366" height="742" alt="managing users" src="https://github.com/user-attachments/assets/93c59074-0dbf-46ba-b717-088d039f5762" />
+<img width="1219" height="683" alt="log in page " src="https://github.com/user-attachments/assets/4239694f-340e-44c1-bfd1-0978d39b2ff3" />
+<img width="1307" height="672" alt="admin homepage" src="https://github.com/user-attachments/assets/ed641ad9-e7ed-4d4a-a161-070178880b0d" />
+<img width="1307" height="676" alt="inserting" src="https://github.com/user-attachments/assets/1b4f9a07-d183-4197-abd6-b6d25fe9aa83" />
+
+<img width="1304" height="666" alt="the actual notice " src="https://github.com/user-attachments/assets/6c81f6f3-8a54-4989-ab0c-4448f5fb6c00" />
+
 
 
 Built with
