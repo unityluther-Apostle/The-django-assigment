@@ -1,3 +1,7 @@
+Name:
+  Paul Ssebuliba 
+Regno. 
+  24/449BSE/AP/U
 School Notification System
 
 A web app built with Django where school admins post notices and viewers read them.
@@ -20,6 +24,5 @@ Built with
   HTML/CSS
   SQLite
 
-  Author
-Paul Ssebuliba Regno. 24/449BSE/AP/U
+
 
